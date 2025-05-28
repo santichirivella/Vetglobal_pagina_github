@@ -35,6 +35,9 @@ img {
     display: block;
     object-fit: cover;
 }
+button {
+    font-size: 16px;
+}
 
 /* Formularios */
 input, textarea, select {
