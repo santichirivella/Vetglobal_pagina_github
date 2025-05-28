@@ -1,3 +1,7 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -12,18 +16,13 @@
 			<!-- frame de la nav var -->
 			<ul>
 				<img src="/img/img/a7ec7cba-1dcb-4c3f-94b3-f55232800f30_VETGLOBAL-LOGO-JPG.webp" alt="">
-				<li>acerca de</li>
-				<li>inicio</li>
-				<li>comunidad</li>
-				<li>catalogo</li>
-				<button>iniciar sesion</button>
+				<li> <a href="/acerca_de">acerca de</a> </li>
+				<li><a href="/">inicio</a></li>
+				<li> <a href="/comunidad">comunidad</a></li>
+				<li><a href="/catalogue">catalogo</a></li>
+				<button><a href="/login">iniciar sesion</a></button>
 			</ul>
 		</div>
-		
-
-
-
-
 		<slot />
 	</body>
 </html>

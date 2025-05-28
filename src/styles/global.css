@@ -1,0 +1,54 @@
+/* Reset básico */
+* {
+    margin: unset;
+    padding: unset;
+    outline: unset;
+    border: unset;
+    box-sizing: border-box;
+}
+
+/* Asegura que el texto del botón de iniciar sesión sea blanco */
+button, .btn {
+    color: #fff !important;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: #1e1e1e;
+    background-color: #f8f9fa;
+    
+}
+
+/* Enlaces */
+a {
+    color: #1e1e1e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Formularios */
+input, textarea, select {
+    font: inherit;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Utilidades */
+.mt-2 { margin-top: 16px; }
+.mb-2 { margin-bottom: 16px; }
+.p-2 { padding: 16px; }
+.text-center { text-align: center; }
