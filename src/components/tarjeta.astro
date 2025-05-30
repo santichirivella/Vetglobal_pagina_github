@@ -1,6 +1,20 @@
-<div>
-    <h3>titulo de la tarjeta</h3>
+---
+interface Props {
+    title: string;
+    empresa: string;
+    description: string;
+    imageUrl: string;
     
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo tempora asperiores laborum reiciendis voluptatum dolores magni vero consequatur. Sunt eum omnis ex vitae magni et saepe quo eius esse quis.</p>
-    <button>ver mas</button>
+}
+const {title, description, empresa, imageUrl} = Astro.props;
+---
+
+
+
+<div class="product-card">
+    <img src={imageUrl}alt="Product Title" class="product-image" />
+    <h2 class="product-title">{title}</h2>
+    <p class="product-description">{description}</p>
+    <p class="product-empresa">{empresa}</p>
+    <button class="product-button">Add to Cart</button>
 </div>
