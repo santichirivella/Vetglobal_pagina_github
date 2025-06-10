@@ -21,173 +21,236 @@ import Tarjeta from "../components/Tarjeta.astro";
 			<img
 				src="/caballo.png"
 				alt=""
-				style="max-width: 1000px; border-radius: 1rem;"
+				style="max-width: 1000px; border-radius: 10rem;"
 			/>
 		</div>
 	</div>
 
-	<!---------------------------->
-	<!-- frame de las cards -->
-	<div>
-		<div class="tarjetas">
-			<Tarjeta
-				title="NITROFURANTOINA"
-				empresa="CALOX"
-				description="La nitrofurantoina se utiliza para tratar las infecciones del tracto urinario"
-				imageUrl="/nitro.png"
-			/>
-			<Tarjeta
-				title="AFTOVAC"
-				empresa="CALA"
-				description="Vacuna contra la fiebre aftosa"
-				imageUrl="/aftovac.png"
-			/>
-			<Tarjeta
-				title="BENZAPROC"
-				empresa="SERVINSUMOS"
-				description="ANTIBIÓTICO DE INMEDIATA, PERSISTENTE Y LARGA ACCIÓN"
-				imageUrl="/benzaproc.webp"
-			/>
-
-			<div class="jumbotron2">
+	<div class="tarjetas">
+		<Tarjeta
+			title="NITROFURANTOINA"
+			empresa="CALOX"
+			description="La nitrofurantoina se utiliza para tratar las infecciones del tracto urinario"
+			imageUrl="/nitro.png"
+		/>
+		<Tarjeta
+			title="AFTOVAC"
+			empresa="CALA"
+			description="Vacuna contra la fiebre aftosa"
+			imageUrl="/aftovac.png"
+		/>
+		<Tarjeta
+			title="BENZAPROC"
+			empresa="SERVINSUMOS"
+			description="ANTIBIÓTICO DE INMEDIATA, PERSISTENTE Y LARGA ACCIÓN"
+			imageUrl="/benzaproc.webp"
+		/>
+	</div>
+	<div class="jumbotron2">
+		<div>
+			<div>
 				<div>
 					<h1>
 						ADQUIERE LOS MEJORES PRODUCTOS VETERINARIOS EN UNA GAMA
 						TOTAL
 					</h1>
-					<img
-						src="c:\Users\sanje\Downloads\pexels-souvenirpixels-1576738-removebg-preview.png"
-						alt=""
-					/><!-- ellipse 1-->
 				</div>
 			</div>
+			<img
+				src="./vaca.png"
+				alt=""
+				style="max-width: 1000px; border-radius: 10rem;"
+			/>
 		</div>
 	</div>
+
+	<style>
+		.jumbotron {
+			gap: 14rem;
+			position: relative;
+			min-height: 800px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			background:
+				linear-gradient(
+					180deg,
+					rgba(0, 40, 100, 0.7) 0%,
+					rgba(0, 80, 180, 0.5) 100%
+				),
+				url("/campo.jpg") center/cover no-repeat;
+			border-radius: 1rem;
+			overflow: hidden;
+			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+			min-height: 1512px;
+			padding-top: 4rem;
+
+			padding-bottom: 4rem;
+		}
+
+		.jumbotron h1 {
+			font-size: 56px;
+			line-height: 1.2;
+			white-space: pre-line;
+			max-width: 600px;
+			word-break: break-word;
+		}
+
+		@media (max-width: 900px) {
+			.jumbotron h1 {
+				font-size: 36px;
+				max-width: 90vw;
+			}
+		}
+		.jumbotron > div {
+			padding: 3rem 4rem;
+		}
+
+		@media (max-width: 900px) {
+			.jumbotron > div {
+				padding: 2rem 1rem;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.jumbotron img {
+				width: 90vw;
+				height: auto;
+			}
+		}
+		.jumbotron > div {
+			gap: 45rem;
+		}
+		.comprar {
+			color: #0339a6;
+			background: #fff;
+			color: #0339a6;
+			border: none;
+			padding: 0.75rem 2rem;
+			border-radius: 0.5rem;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+			transition:
+				background 0.2s,
+				color 0.2s;
+		}
+		button:not(.comprar) {
+			background: transparent;
+			color: #fff;
+			border: 2px solid #fff;
+			padding: 0.75rem 2rem;
+			border-radius: 0.5rem;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+			transition:
+				background 0.2s,
+				color 0.2s,
+				border 0.2s;
+		}
+
+		button:not(.comprar):hover {
+			background: #fff;
+			color: #0339a6;
+			border-color: #0339a6;
+		}
+
+		.jumbotron h2 {
+			font-size: 24px;
+		}
+		.jumbotron > div {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 2rem;
+		}
+
+		.jumbotron img {
+			width: 645px;
+			height: 638px;
+		}
+		.jumbotron > div {
+			gap: 1rem;
+		}
+
+		.jumbotron img {
+			margin-left: 0;
+		}
+
+		.tarjetas {
+			display: flex;
+			gap: 4rem;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			justify-content: center;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+
+		.jumbotron2 {
+			gap: 40rem;
+			position: relative;
+			min-height: 800px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			background:
+				linear-gradient(
+					180deg,
+					rgba(0, 40, 100, 0.7) 0%,
+					rgba(0, 80, 180, 0.5) 100%
+				),
+				url("/campo.jpg") center/cover no-repeat;
+			border-radius: 1rem;
+			overflow: hidden;
+			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+			min-height: 1512px;
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.jumbotron2 > div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 34rem;
+		}
+
+		.jumbotron2 img {
+			width: 645px;
+			height: 638px;
+			border-radius: 10rem;
+		}
+
+		.jumbotron2 h1 {
+			font-size: 56px;
+			line-height: 1.2;
+			max-width: 600px;
+			word-break: break-word;
+			white-space: pre-line;
+		}
+
+		@media (max-width: 900px) {
+			.jumbotron2 > div {
+				flex-direction: row-reverse;
+				align-items: flex-start;
+				gap: 2rem;
+			}
+			.jumbotron2 img {
+				width: 90vw;
+				height: auto;
+			}
+			.jumbotron2 h1 {
+				font-size: 36px;
+				max-width: 90vw;
+			}
+		}
+		.jumbotron2 > div {
+			flex-direction: row-reverse;
+		}
+		
+	</style>
+	
 </Layout>
-
-<style>
-	.jumbotron {
-		position: relative;
-		min-height: 800px;
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		color: white;
-		background:
-			linear-gradient(
-				180deg,
-				rgba(0, 40, 100, 0.7) 0%,
-				rgba(0, 80, 180, 0.5) 100%
-			),
-			url("/campo.jpg") center/cover no-repeat;
-		border-radius: 1rem;
-		overflow: hidden;
-		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-		min-height: 1512px;
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-
-
-
-	.jumbotron h1 {
-		/* Divide en tres líneas usando <br> en el HTML, pero aquí forzamos el tamaño */
-		font-size: 12px;
-		line-height: 1.4;
-		white-space: pre-line;
-	}
-
-	.comprar {
-		color: #0339a6;
-		background: #fff;
-		color: #0339a6;
-		border: none;
-		padding: 0.75rem 2rem;
-		border-radius: 0.5rem;
-		font-size: 1rem;
-		font-weight: bold;
-		cursor: pointer;
-		transition:
-			background 0.2s,
-			color 0.2s;
-	}
-	button:not(.comprar) {
-		background: transparent;
-		color: #fff;
-		border: 2px solid #fff;
-		padding: 0.75rem 2rem;
-		border-radius: 0.5rem;
-		font-size: 1rem;
-		font-weight: bold;
-		cursor: pointer;
-		transition:
-			background 0.2s,
-			color 0.2s,
-			border 0.2s;
-	}
-
-	button:not(.comprar):hover {
-		background: #fff;
-		color: #0339a6;
-		border-color: #0339a6;
-	}
-
-
-	.jumbotron h2 {
-		font-size: 24px;
-	}
-	.jumbotron > div {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 2rem;
-	}
-
-	.jumbotron img {
-		width: 645px;
-		height: 638px;
-	}
-	.jumbotron > div {
-		gap: 1rem;
-	}
-
-	.jumbotron img {
-		margin-left: 0;
-	}
-	
-
-	.tarjetas {
-		display: flex;
-		gap: 4rem;
-		margin-top: 3rem;
-		margin-bottom: 3rem;
-		justify-content: center;
-		align-items: flex-start;
-		flex-wrap: wrap;
-	}
-	.jumbotron2 {
-		position: relative;
-		min-height: 1512px;
-		width: 1900px;
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		color: white;
-		background:
-			linear-gradient(
-				180deg,
-				rgba(0, 40, 100, 0.7) 0%,
-				rgba(0, 80, 180, 0.5) 100%
-			),
-			url("/campo.jpg") center/cover no-repeat;
-		border-radius: 1rem;
-		overflow: hidden;
-		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-		min-height: 1512px;
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-		max-width: 100%;
-	}
-
-	
-</style>
