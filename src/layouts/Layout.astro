@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <!doctype html>
@@ -14,57 +14,256 @@ import { Icon } from 'astro-icon/components';
 	</head>
 	<body>
 		<div class="navbar">
-
 			<!-- frame de la nav var -->
 			<ul class="navbar__list">
-				<img src="/logo.png" alt="" class="navbar__icon">
-				<li> <a href="/acerca_de">acerca de</a> </li>
+				<img src="/logo.png" alt="" class="navbar__icon" />
+				<li><a href="/acerca_de">acerca de</a></li>
 				<li><a href="/">inicio</a></li>
-				<li> <a href="/comunidad">comunidad</a></li>
+				<li><a href="/comunidad">comunidad</a></li>
 				<li><a href="/catalogue">catalogo</a></li>
 				<Icon name="mdi:user" class="navbar__icon" />
 				<button><a href="/login">iniciar sesion</a></button>
-
 			</ul>
 		</div>
-		<hr style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;" />
+		<hr
+			style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+		/>
 		<slot />
 		<!-- frame del fotter -->
 		<div>
-			<div class="fotter"> <!-- frame 263 -->
-				
-						<div><!-- frame 260 -->
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTQgNi41OSA2LjU5bDIuMi0yLjJjLjI3LS4yNy42Ny0uMzYgMS4wMi0uMjRjMS4xMi4zNyAyLjMzLjU3IDMuNTcuNTdjLjU1IDAgMSAuNDUgMSAxVjIwYzAgLjU1LS40NSAxLTEgMWMtOS4zOSAwLTE3LTcuNjEtMTctMTdjMC0uNTUuNDUtMSAxLTFoMy41Yy41NSAwIDEgLjQ1IDEgMWMwIDEuMjUuMiAyLjQ1LjU3IDMuNTdjLjExLjM1LjAzLjc0LS4yNSAxLjAyeiIvPjwvc3ZnPg==" alt="">
-							<p>(+58)0424-440-4940</p>
-						</div>
-						<div><!-- frame 261 -->
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik00IDIwcS0uODI1IDAtMS40MTItLjU4N1QyIDE4VjZxMC0uODI1LjU4OC0xLjQxMlQ0IDRoMTZxLjgyNSAwIDEuNDEzLjU4OFQyMiA2djEycTAgLjgyNS0uNTg3IDEuNDEzVDIwIDIwem04LTdMNCA4djEwaDE2Vjh6bTAtMmw4LTVINHpNNCA4VjZ2MTJ6Ii8+PC9zdmc+" alt="">
-							<p>inversionesvetglobalca@gmail.com</p>
-						</div>
-						<div><!-- frame 262 -->
-							<Icon name="mdi:location-on-outline" width={32} class="navbar__icon" />
-							<p>ubicanos</p>
-						</div>
-					<div> <!-- frame 4 -->
-						<Icon name="mdi:instagram"width={32} class="navbar__icon" />
-						<hr style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;" />
-						<Icon name="mdi:facebook" width={32} class="navbar__icon" />
-						<hr style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;" />
-						<Icon name="mdi:whatsapp" width={32} class="navbar__icon" /> 
+			<div class="fotter">
+				<div>
+					<img
+						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTQgNi41OSA2LjU5bDIuMi0yLjJjLjI3LS4yNy42Ny0uMzYgMS4wMi0uMjRjMS4xMi4zNyAyLjMzLjU3IDMuNTcuNTdjLjU1IDAgMSAuNDUgMSAxVjIwYzAgLjU1LS40NSAxLTEgMWMtOS4zOSAwLTE3LTcuNjEtMTctMTdjMC0uNTUuNDUtMSAxLTFoMy41Yy41NSAwIDEgLjQ1IDEgMWMwIDEuMjUuMiAyLjQ1LjU3IDMuNTdjLjExLjM1LjAzLjc0LS4yNSAxLjAyeiIvPjwvc3ZnPg=="
+						alt=""
+					/>
+					<p>(+58)0424-440-4940</p>
+
+					<img
+						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik00IDIwcS0uODI1IDAtMS40MTItLjU4N1QyIDE4VjZxMC0uODI1LjU4OC0xLjQxMlQ0IDRoMTZxLjgyNSAwIDEuNDEzLjU4OFQyMiA2djEycTAgLjgyNS0uNTg3IDEuNDEzVDIwIDIwem04LTdMNCA4djEwaDE2Vjh6bTAtMmw4LTVINHpNNCA4VjZ2MTJ6Ii8+PC9zdmc+"
+						alt=""
+					/>
+					<p>inversionesvetglobalca@gmail.com</p>
+
+					<Icon
+						name="mdi:location-on-outline"
+						width={32}
+						class="navbar__icon"
+					/>
+					<p>ubicanos</p>
+				</div>
+
+				<footer class="footer">
+					<img
+						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTQgNi41OSA2LjU5bDIuMi0yLjJjLjI3LS4yNy42Ny0uMzYgMS4wMi0uMjRjMS4xMi4zNyAyLjMzLjU3IDMuNTcuNTdjLjU1IDAgMSAuNDUgMSAxVjIwYzAgLjU1LS40NSAxLTEgMWMtOS4zOSAwLTE3LTcuNjEtMTctMTdjMC0uNTUuNDUtMSAxLTFoMy41Yy41NSAwIDEgLjQ1IDEgMWMwIDEuMjUuMiAyLjQ1LjU3IDMuNTdjLjExLjM1LjAzLjc0LS4yNSAxLjAyeiIvPjwvc3ZnPg=="
+						alt=""
+					/>
+					<p>(+58)0424-440-4940</p>
+
+					<img
+						src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik00IDIwcS0uODI1IDAtMS40MTItLjU4N1QyIDE4VjZxMC0uODI1LjU4OC0xLjQxMlQ0IDRoMTZxLjgyNSAwIDEuNDEzLjU4OFQyMiA2djEycTAgLjgyNS0uNTg3IDEuNDEzVDIwIDIwem04LTdMNCA4djEwaDE2Vjh6bTAtMmw4LTVINHpNNCA4VjZ2MTJ6Ii8+PC9zdmc+"
+						alt=""
+					/>
+					<p>inversionesvetglobalca@gmail.com</p>
+
+					<Icon
+						name="mdi:location-on-outline"
+						width={32}
+						class="navbar__icon"
+					/>
+					<p>ubicanos</p>
+					<div class="redes">
+						<!-- frame 4 -->
+						<Icon
+							name="mdi:instagram"
+							width={32}
+							class="navbar__icon"
+						/>
+						<hr
+							style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+						/>
+						<Icon
+							name="mdi:facebook"
+							width={32}
+							class="navbar__icon"
+						/>
+						<hr
+							style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+						/>
+						<Icon
+							name="mdi:whatsapp"
+							width={32}
+							class="navbar__icon"
+						/>
+
+						<p>© 2023 VetGlobal. Todos los derechos reservados.</p>
+						<p>
+							Desarrollado por <a href="" target="_blank"
+								>Tu Nombre</a
+							>
+						</p>
 					</div>
+				</footer>
+			</div>
 		</div>
-			<footer>
-				<p>© 2023 VetGlobal. Todos los derechos reservados.</p>
-				<p>Desarrollado por <a href="" target="_blank">Tu Nombre</a></p>
-			</footer>
-		</div>
+
+		<style>
+			.navbar__list {
+				display: flex;
+				justify-content: space-between;
+			
+		
+			}
+			.navbar {
+				background: #252b42;
+				padding: 1rem 0;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+			}
+
+			.navbar__list {
+				align-items: center;
+				gap: 2rem;
+				list-style: none;
+				margin: 0 auto;
+				padding: 0 2rem;
+				max-width: 1200px;
+			}
+
+			.navbar__icon {
+				width: 36px;
+				height: 36px;
+				object-fit: contain;
+			}
+
+			.navbar__list li {
+				margin: 0;
+			}
+
+			.navbar__list a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 1.1rem;
+				padding: 0.5rem 1rem;
+				border-radius: 4px;
+				transition: background 0.2s;
+			}
+
+			.navbar__list a:hover {
+				background: #0077cc;
+				color: #fff;
+			}
+
+			.navbar__list button {
+				background: #0077cc;
+				color: #fff;
+				border: none;
+				padding: 0.5rem 1.2rem;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 1rem;
+				font-weight: 600;
+				transition: background 0.2s;
+			}
+
+			.navbar__list button:hover {
+				background: #005fa3;
+			}
+
+			@media (max-width: 900px) {
+				.navbar__list {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 1rem;
+					padding: 0 1rem;
+				}
+				.navbar {
+					padding: 0.5rem 0;
+				}
+			}
+		</style>
+
+		<style>
+			.fotter {
+				background: #252b42;
+				padding: 2rem 0;
+				border-top: 1px solid #e0e0e0;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.footer {
+				display: flex;
+				flex-direction: row;
+
+				justify-content: center;
+				gap: 3rem;
+				width: 100%;
+				max-width: 1200px;
+				margin-top: 2rem;
+				background: transparent;
+				border: none;
+				box-shadow: none;
+			}
+
+			.footer > div,
+			.footer > p,
+			.footer > img,
+			.footer > .navbar__icon {
+				margin: 0 1rem;
+				display: flex;
+
+				gap: 0.5rem;
+			}
+
+			.footer p {
+				margin: 0;
+				font-size: 1rem;
+				color: #333;
+			}
+
+			.footer img,
+			.footer .navbar__icon {
+				width: 32px;
+				height: 32px;
+			}
+
+			.redes {
+				display: flex;
+				flex-direction: row;
+
+				gap: 1.5rem;
+				margin-left: 2rem;
+			}
+
+			.redes p {
+				margin-left: 1rem;
+				font-size: 0.95rem;
+				color: #666;
+			}
+
+			.redes a {
+				color: #0077cc;
+				text-decoration: none;
+				font-weight: 500;
+			}
+
+			.redes a:hover {
+				text-decoration: underline;
+			}
+
+			@media (max-width: 900px) {
+				.footer {
+					flex-direction: column;
+					gap: 1.5rem;
+				}
+				.redes {
+					flex-direction: column;
+
+					margin-left: 0;
+					gap: 0.5rem;
+				}
+			}
+		</style>
 	</body>
 </html>
-
-<style>
-	.navbar__list {
-		display: flex;
-		justify-content: space-between;
-	}
-
-</style>

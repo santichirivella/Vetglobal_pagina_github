@@ -2,88 +2,192 @@
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import Tarjeta from "../components/Tarjeta.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<!-- frame del primer jumtbotron -->
-	<div>
+	<div class="jumbotron">
 		<div>
-			<!-- frame de la nav var -->
-		</div>
-
-		<div>
-			<!--segundo frame (frame 16) -->
-			<div></div><!--frame 11 -->
 			<div>
 				<div>
-					<!--frame 10 -->
-					<div>
-						<!--frame 8 -->
-						<p>LO IDEAL PARA EL GANADERO VENEZOLANO</p>
-						<p>insumos agropecuarios y medicina veterinaria</p>
-					</div>
-					<div>
-						<!--frame 9 -->
-						<button>COMPRAR AHORA</button>
-					</div>
-					<div>
-						<!--frame 7 -->
-						<button>VER PRODUCTOS</button>
-					</div>
+					<h1>LO IDEAL PARA EL GANADERO VENEZOLANO</h1>
+
+					<h2>insumos agropecuarios y medicina veterinaria</h2>
 				</div>
 				<div>
-					<!--frame 14 -->
-					<!--rectangulo con imagen del caballo de fondo -->
+					<button class="comprar">COMPRAR AHORA</button>
+					<button>VER PRODUCTOS</button>
 				</div>
-				<!--flechita con vecor -->
 			</div>
+			<img
+				src="/caballo.png"
+				alt=""
+				style="max-width: 1000px; border-radius: 1rem;"
+			/>
 		</div>
 	</div>
 
 	<!---------------------------->
 	<!-- frame de las cards -->
 	<div>
-		<div>
+		<div class="tarjetas">
 			<Tarjeta
 				title="NITROFURANTOINA"
 				empresa="CALOX"
 				description="La nitrofurantoina se utiliza para tratar las infecciones del tracto urinario"
-				imageUrl="/nitro.jpg"
+				imageUrl="/nitro.png"
 			/>
-			<Tarjeta 
+			<Tarjeta
 				title="AFTOVAC"
 				empresa="CALA"
 				description="Vacuna contra la fiebre aftosa"
-				imageUrl="/aftovac.jpg"
+				imageUrl="/aftovac.png"
 			/>
-			<Tarjeta 
+			<Tarjeta
 				title="BENZAPROC"
 				empresa="SERVINSUMOS"
 				description="ANTIBIÓTICO DE INMEDIATA, PERSISTENTE Y LARGA ACCIÓN"
 				imageUrl="/benzaproc.webp"
 			/>
-			
-			<div>
-				<!-- frame del segundo jumtbotron -->
+
+			<div class="jumbotron2">
 				<div>
-					<!-- frame 16 -->
-					<div>
-						<div>
-							<p>
-								ADQUIERE LOS MEJORES PRODUCTOS VETERINARIOS EN
-								UNA GAMA TOTAL
-							</p>
-							<img
-								src="c:\Users\sanje\Downloads\pexels-souvenirpixels-1576738-removebg-preview.png"
-								alt=""
-							/><!-- ellipse 1-->
-						</div>
-					</div>
+					<h1>
+						ADQUIERE LOS MEJORES PRODUCTOS VETERINARIOS EN UNA GAMA
+						TOTAL
+					</h1>
+					<img
+						src="c:\Users\sanje\Downloads\pexels-souvenirpixels-1576738-removebg-preview.png"
+						alt=""
+					/><!-- ellipse 1-->
 				</div>
 			</div>
 		</div>
 	</div>
 </Layout>
+
+<style>
+	.jumbotron {
+		position: relative;
+		min-height: 800px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		color: white;
+		background:
+			linear-gradient(
+				180deg,
+				rgba(0, 40, 100, 0.7) 0%,
+				rgba(0, 80, 180, 0.5) 100%
+			),
+			url("/campo.jpg") center/cover no-repeat;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+		min-height: 1512px;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+
+
+	.jumbotron h1 {
+		/* Divide en tres líneas usando <br> en el HTML, pero aquí forzamos el tamaño */
+		font-size: 12px;
+		line-height: 1.4;
+		white-space: pre-line;
+	}
+
+	.comprar {
+		color: #0339a6;
+		background: #fff;
+		color: #0339a6;
+		border: none;
+		padding: 0.75rem 2rem;
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition:
+			background 0.2s,
+			color 0.2s;
+	}
+	button:not(.comprar) {
+		background: transparent;
+		color: #fff;
+		border: 2px solid #fff;
+		padding: 0.75rem 2rem;
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition:
+			background 0.2s,
+			color 0.2s,
+			border 0.2s;
+	}
+
+	button:not(.comprar):hover {
+		background: #fff;
+		color: #0339a6;
+		border-color: #0339a6;
+	}
+
+
+	.jumbotron h2 {
+		font-size: 24px;
+	}
+	.jumbotron > div {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 2rem;
+	}
+
+	.jumbotron img {
+		width: 645px;
+		height: 638px;
+	}
+	.jumbotron > div {
+		gap: 1rem;
+	}
+
+	.jumbotron img {
+		margin-left: 0;
+	}
+	
+
+	.tarjetas {
+		display: flex;
+		gap: 4rem;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	.jumbotron2 {
+		position: relative;
+		min-height: 1512px;
+		width: 1900px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		color: white;
+		background:
+			linear-gradient(
+				180deg,
+				rgba(0, 40, 100, 0.7) 0%,
+				rgba(0, 80, 180, 0.5) 100%
+			),
+			url("/campo.jpg") center/cover no-repeat;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+		min-height: 1512px;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		max-width: 100%;
+	}
+
+	
+</style>
