@@ -4,11 +4,133 @@ import Layout from "../layouts/Layout.astro";
 
 
 <Layout>
-    adriana lisbeth 
+    <div class = "nosotros">
+        <h1> Reseña histórica</h1>
+        <p>
+            somos una empresa con experiencia desde el año 2016, contamos con la capacitacion y el equipo correcto para la satisfacer correctamente sus demandas
+            de manera rapida y eficiente, somos una familia dispuesta a buscar mas y pensar en grande para brindar ayuda en la industria ganadera venezolana
+        </p>
+        <img src="./logo2.png" alt="">
+
+        <h1>
+            Misión
+        </h1>
+        <p>
+            Satisfacer las necesidades de consumidores, clientes y proveedores, a través de nuestros productos y la mejor gestión de negocios, garantizando los mejores niveles de calidad y eficiencia,
+            con la mejor relación precio/valor y rentabilidad del mercado, ayudando así con el mejoramiento del sector agropecuario del país.
+        </p>
+        <img src="./corral.jpeg" alt="">
+
+        <h1>
+            visión
+        </h1>
+        <p>
+            ser una empresa lider en la distribucion y fabricacion de recursos para la industria no osolo veterinaria sino que tambien ganadera
+            para ayudara los ganadores nacionales como internacionales
+        </p>
+        <img src="./stock.jpeg" alt="">
+        <h1>
+            valores
+        </h1>
+        <p>
+            Fomentamos el trabajo en equipo como principal valor dentro de nuestra empresa, concentrándonos además en la responsabilidad,
+             innovación y flexibilidad tanto para nuestros clientes como para nuestros trabajadores y proveedores.
+        </p>
+        <img src="./team.webp" alt="">
+    </div>
+
+
+
+
+
+
+
+
+    <!-- adriana lisbeth 
     albravel@gmail.com
     04244404940
     santiago chirivella 
     sanjechibra2@gmail.com
     04144273032
-    blanca chirivella
+    blanca chirivella -->
 </Layout>
+
+<style>
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nosotros > * {
+    margin: 0;
+}
+
+.nosotros h1,
+.nosotros p,
+.nosotros img {
+    width: 100%;
+}
+
+.nosotros > h1,
+.nosotros > p,
+.nosotros > img {
+    /* Reset default spacing */
+    margin-bottom: 0.5rem;
+}
+
+.nosotros > h1 {
+    margin-top: 2rem;
+}
+
+.nosotros > p {
+    margin-bottom: 1.5rem;
+}
+
+.nosotros img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.nosotros > h1,
+.nosotros > p,
+.nosotros > img {
+    /* Remove default alignment */
+    text-align: center;
+}
+
+.nosotros > *:nth-of-type(1),
+.nosotros > *:nth-of-type(2),
+.nosotros > *:nth-of-type(3) {
+    align-self:center;
+    text-align: center;
+}
+
+.nosotros > *:nth-of-type(4),
+.nosotros > *:nth-of-type(5),
+.nosotros > *:nth-of-type(6) {
+    align-self: center;
+    text-align: center;
+}
+
+.nosotros > *:nth-of-type(7),
+.nosotros > *:nth-of-type(8),
+.nosotros > *:nth-of-type(9) {
+    align-self: center;
+    text-align: center;
+}
+
+.nosotros > *:nth-of-type(10),
+.nosotros > *:nth-of-type(11),
+.nosotros > *:nth-of-type(12) {
+    align-self:center;
+    text-align: center;
+}
+
+</style>
