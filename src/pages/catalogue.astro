@@ -4,5 +4,37 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <Tarjeta></Tarjeta>
+    <div class="catalogue">
+        <h1>Catálogo de Productos</h1>
+        <div class="product-list">
+        <Tarjeta
+            title="NITROFURANTOINA"
+            empresa="CALOX"
+            description="La nitrofurantoina se utiliza para tratar las infecciones del tracto urinario"
+            imageUrl="/nitro.png"
+        />
+        <Tarjeta
+            title="AFTOVAC"
+            empresa="CALA"
+            description="Vacuna contra la fiebre aftosa"
+            imageUrl="/aftovac.png"
+        />
+        <Tarjeta
+            title="BENZAPROC"
+            empresa="SERVINSUMOS"
+            description="ANTIBIÓTICO DE INMEDIATA, PERSISTENTE Y LARGA ACCIÓN"
+            imageUrl="/benzaproc.webp"
+        />
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .product-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+
+    }
+ </style>

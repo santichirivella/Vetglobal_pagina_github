@@ -103,6 +103,7 @@ import Tarjeta from "../components/Tarjeta.astro";
 			white-space: pre-line;
 			max-width: 600px;
 			word-break: break-word;
+			padding-left: 90px;
 		}
 
 		@media (max-width: 900px) {
@@ -126,43 +127,40 @@ import Tarjeta from "../components/Tarjeta.astro";
 			}
 		}
 		
-		.comprar {
-			color: #0339a6;
-			background: #fff;
-			color: #0339a6;
+		.jumbotron button {
+			padding: 0rem 2rem;
+			font-size: 1.2rem;
+			border-radius: 2rem;
 			border: none;
-			padding: 0.75rem 2rem;
-			border-radius: 0.5rem;
-			font-size: 1rem;
-			font-weight: bold;
 			cursor: pointer;
-			transition:
-				background 0.2s,
-				color 0.2s;
-		}
-		button:not(.comprar) {
-			background: transparent;
-			color: #fff;
-			border: 2px solid #fff;
-			padding: 0.75rem 2rem;
-			border-radius: 0.5rem;
-			font-size: 1rem;
-			font-weight: bold;
-			cursor: pointer;
-			transition:
-				background 0.2s,
-				color 0.2s,
-				border 0.2s;
+			transition: background 0.2s, color 0.2s, border 0.2s;
+			margin-right: 1rem;
 		}
 
-		button:not(.comprar):hover {
-			background: #fff;
-			color: #0339a6;
-			border-color: #0339a6;
+		.jumbotron button.comprar {
+			background: #0050b3;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		.jumbotron button:not(.comprar) {
+			background: transparent;
+			color: #0050b3;
+			border: 2px solid #0050b3;
+			font-weight: bold;
+		}
+
+		.jumbotron button.comprar:hover {
+			background: #003366;
+		}
+
+		.jumbotron button:not(.comprar):hover {
+			background: #e6f0ff;
 		}
 
 		.jumbotron h2 {
 			font-size: 24px;
+			padding-left:90px;
 		}
 		.jumbotron > div {
 			display: flex;
@@ -172,8 +170,8 @@ import Tarjeta from "../components/Tarjeta.astro";
 		}
 
 		.jumbotron img {
-			width: 850px;
-			height: 850px;
+			width: 500x;
+			height: 500px;
 		}
 		.jumbotron > div {
 			gap: 20rem;
@@ -220,7 +218,7 @@ import Tarjeta from "../components/Tarjeta.astro";
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			gap: 25rem;
+			gap: 20rem;
 		}
 
 		.jumbotron2 img {
@@ -230,7 +228,7 @@ import Tarjeta from "../components/Tarjeta.astro";
 		}
 
 		.jumbotron2 h1 {
-			font-size: 56px;
+			font-size: 42px;
 			line-height: 1.2;
 			max-width: 600px;
 			word-break: break-word;
@@ -251,6 +249,15 @@ import Tarjeta from "../components/Tarjeta.astro";
 		}
 		.jumbotron2 > div {
 			flex-direction: row-reverse;
+		}
+		.jumbotron button {
+			padding-left: 90px;
+		}
+
+		@media (max-width: 900px) {
+			.jumbotron button {
+				padding-left: 0;
+			}
 		}
 		
 	</style>
