@@ -1,23 +1,262 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	
-</html>
-
 <body>
-	<Navbar />
-	<slot />
-	<Footer />
+	<head>
+		<div class="navbar">
+			<!-- frame de la nav var -->
+			<ul class="navbar__list">
+				<img src="/logo.png" alt="" class="navbar__icon" />
+				<li><a href="/acerca_de">acerca de</a></li>
+				<li><a href="/">inicio</a></li>
+				<li><a href="/comunidad">comunidad</a></li>
+				<li><a href="/catalogue">catalogo</a></li>
+				<Icon name="mdi:user" class="navbar__icon" />
+				<button><a href="/login">iniciar sesion</a></button>
+			</ul>
+		</div>
+		<hr
+			style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+		/>
+		<slot />
+		<div>
+			<footer class="datos">
+				<Icon
+					name="mdi:phone-outline"
+					width={32}
+					class="navbar__icon"
+				/>
+				<p>(+58)0424-440-4940</p>
+
+				<Icon
+					name="mdi:email-outline"
+					width={32}
+					class="navbar__icon"
+				/>
+				<p>inversionesvetglobalca@gmail.com</p>
+
+				<Icon
+					name="mdi:location-on-outline"
+					width={32}
+					class="navbar__icon"
+				/>
+				<p>ubicanos</p>
+				<div class="redes">
+					<!-- frame 4 -->
+					<Icon
+						name="mdi:instagram"
+						width={32}
+						class="navbar__icon"
+					/>
+					<hr
+						style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+					/>
+					<Icon name="mdi:facebook" width={32} class="navbar__icon" />
+					<hr
+						style="margin: 2rem 0; border: none; border-top: 1px solid #0d0d0d;"
+					/>
+					<Icon name="mdi:whatsapp" width={32} class="navbar__icon" />
+
+					<p>© 2023 VetGlobal. Todos los derechos reservados.</p>
+					<p>
+						Desarrollado por <a href="" target="_blank">Santiago Chirivella</a
+						>
+					</p>
+				</div>
+			</footer>
+		</div>
+	</head>
+</body>
+
+<style>
+	.navbar__list {
+		display: flex;
+		justify-content: space-between;
+	}
+	.navbar {
+		background: #252b42;
+		padding: 1rem 0;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	}
+
+	.navbar__list {
+		align-items: center;
+		gap: 2rem;
+		list-style: none;
+		margin: 0 auto;
+		padding: 0 2rem;
+		max-width: 1200px;
+	}
+
+	.navbar__icon {
+		width: 36px;
+		height: 36px;
+		object-fit: contain;
+	}
+
+	.navbar__list li {
+		margin: 0;
+	}
+
+	.navbar__list a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.1rem;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		transition: background 0.2s;
+	}
+
+	.navbar__list a:hover {
+		background: #0a2342;
+		color: #fff;
+	}
+
+	.navbar__list button {
+		background: #0a2342;
+		color: #fff;
+		border: none;
+		padding: 0.5rem 1.2rem;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: 600;
+		transition: background 0.2s;
+	}
+
+	.navbar__list button:hover {
+		background: #0a2342;
+	}
+
+	@media (max-width: 900px) {
+		.navbar__list {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+			padding: 0 1rem;
+		}
+		.navbar {
+			padding: 0.5rem 0;
+		}
+	}
+</style>
+<style>
+	.datos {
+		flex-direction: row !important;
+		align-items: center !important;
+		justify-content: center !important;
+		background: #0a2342 !important;
+		gap: 2rem;
+		flex-wrap: nowrap !important;
+		width: 100%;
+	}
+	.datos > p,
+	.datos > img,
+	.datos > .navbar__icon {
+		margin: 0 1rem 0 0;
+		color: #fff !important;
+	}
+	.datos > p {
+		color: #fff !important;
+	}
+	.redes {
+		flex-direction: row !important;
+		align-items: center !important;
+		gap: 0.5rem;
+	}
+	.redes .navbar__icon {
+		color: #fff !important;
+	}
+	.redes p,
+	.redes a {
+		color: #fff !important;
+	}
+
+	footer.datos {
+		background: #0a2342 !important;
+	}
+	.datos {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+		background: #f8f8f8;
+		padding: 2rem 3rem;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.datos > img,
+	.datos > .navbar__icon {
+		margin-right: 0.5rem;
+	}
+
+	.datos > p {
+		margin: 0 1.5rem 0 0;
+		align-self: center;
+		font-size: 1rem;
+		color: #222;
+	}
+
+	.redes {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.redes .navbar__icon {
+		margin: 0 0.5rem;
+		color: #222;
+		transition: color 0.2s;
+		cursor: pointer;
+	}
+
+	.redes .navbar__icon:hover {
+		color: #0a2342;
+	}
+
+	.redes hr {
+		height: 32px;
+		width: 1px;
+		background: #0d0d0d;
+		border: none;
+		margin: 0 0.5rem;
+	}
+
+	.redes p {
+		margin-left: 1rem;
+		font-size: 0.9rem;
+		color: #555;
+		flex-basis: 100%;
+		text-align: left;
+	}
+
+	.redes a {
+		color: #2a2b4c;
+		text-decoration: none;
+	}
+
+	.redes a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 900px) {
+		.datos {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 2rem 1rem;
+		}
+		.redes {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+		.redes hr {
+			display: none;
+		}
+	}
+</style>
