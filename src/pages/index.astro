@@ -13,9 +13,9 @@ import Tarjeta from "../components/Tarjeta.astro";
 
 					<h2>insumos agropecuarios y medicina veterinaria</h2>
 				</div>
-				<div>
-					<button class="comprar">COMPRAR AHORA</button>
-					<button>VER PRODUCTOS</button>
+				<div class="botones">
+					<button >COMPRAR AHORA</button>
+					<a href="/catalogue"><button>VER PRODUCTOS</button></a>
 				</div>
 			</div>
 			<img
@@ -87,16 +87,7 @@ import Tarjeta from "../components/Tarjeta.astro";
 			padding-top: 4rem;
 			padding-bottom: 4rem;
 		}
-
-		.jumbotron > div > div > div + div {
-			display: flex;
-			gap: 1.5rem;
-			margin-top: 2rem;
-		}
-
-		.jumbotron button {
-			margin-top: 0;
-		}
+		
 		.jumbotron h1 {
 			font-size: 56px;
 			line-height: 1.2;
@@ -112,51 +103,50 @@ import Tarjeta from "../components/Tarjeta.astro";
 				max-width: 90vw;
 			}
 		}
-		
+		.botones {
+			display: flex;
+			gap: 1.5rem;
+			margin-top: 2rem;
+			padding-left: 90px;
+		}
+
+		.botones button {
+			font-size: 1.1rem;
+			padding: 0.9rem 2.2rem;
+			border-radius: 2rem;
+			border: 2px solid #213749;
+			cursor: pointer;
+			transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+			font-weight: 600;
+			box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+		}
+
+		.botones button:first-child {
+			background: #213444;
+			color: #fff;
+		}
+
+		.botones button:last-child {
+			background: transparent;
+			color: #2196f3;
+		}
+
+		.botones button:hover,
+		.botones button:focus {
+			box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
+			transform: translateY(-2px) scale(1.03);
+		}
 
 		@media (max-width: 900px) {
-			.jumbotron > div {
-				padding: 2rem 1rem;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 25rem;
-			}
-			.jumbotron img {
-				width: 90vw;
-				height: auto;
+			.botones {
+				padding-left: 0;
+				justify-content: flex-start;
 			}
 		}
+
 		
-		.jumbotron button {
-			padding: 0rem 2rem;
-			font-size: 1.2rem;
-			border-radius: 2rem;
-			border: none;
-			cursor: pointer;
-			transition: background 0.2s, color 0.2s, border 0.2s;
-			margin-right: 1rem;
-		}
-
-		.jumbotron button.comprar {
-			background: #0050b3;
-			color: #fff;
-			font-weight: bold;
-		}
-
-		.jumbotron button:not(.comprar) {
-			background: transparent;
-			color: #0050b3;
-			border: 2px solid #0050b3;
-			font-weight: bold;
-		}
-
-		.jumbotron button.comprar:hover {
-			background: #003366;
-		}
-
-		.jumbotron button:not(.comprar):hover {
-			background: #e6f0ff;
-		}
+		
+		
 
 		.jumbotron h2 {
 			font-size: 24px;
@@ -170,16 +160,12 @@ import Tarjeta from "../components/Tarjeta.astro";
 		}
 
 		.jumbotron img {
-			width: 500x;
+			width: 500px;
 			height: 500px;
 		}
-		.jumbotron > div {
-			gap: 20rem;
-		}
+		
 
-		.jumbotron img {
-			margin-left: 0;
-		}
+		
 
 		.tarjetas {
 			display: flex;
@@ -249,15 +235,6 @@ import Tarjeta from "../components/Tarjeta.astro";
 		}
 		.jumbotron2 > div {
 			flex-direction: row-reverse;
-		}
-		.jumbotron button {
-			padding-left: 90px;
-		}
-
-		@media (max-width: 900px) {
-			.jumbotron button {
-				padding-left: 0;
-			}
 		}
 		
 	</style>
